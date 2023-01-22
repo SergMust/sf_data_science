@@ -29,7 +29,7 @@ def random_predict(number: int = 1) -> int:
         else:
             break # выход из цикла если угадали
     
-    return (count)  
+    return count  
         
 
 def score_game(random_predict) -> int:
