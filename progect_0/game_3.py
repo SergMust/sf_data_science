@@ -4,7 +4,7 @@
 import numpy as np
 
 def random_predict(number: int = 1) -> int:
-    """Рандомно угадываем число
+    """Рандомно компьютер загадывает число
 
     Args:
         number (int, optional): Загадываем число. Default to 1.
@@ -19,19 +19,18 @@ def random_predict(number: int = 1) -> int:
     count = 0
     while a != b: # выполняем цикл пока значения границ диапазона не равны
         count += 1
-
-        if number < int(a + b) // 2: 
-            b = int((a + b) // 2)  # если число меньше среднего значения, 
+        average_value = int((a+b) // 2) # вычисляем среднее значение диапазона
+        if number < average_value: 
+            b = average_value  # если число меньше среднего значения, 
             # то это значение становиться максимальной границей диапазона
-        elif number > int(a + b) // 2:
-            a = int((a + b) // 2) + 1 # если число больше среднего значения, 
+        elif number > average_value:
+            a = average_value + 1 # если число больше среднего значения, 
             # то это значение становиться минимальной границей диапазона + 1
         else:
-            break
-    return (count)  # выход из цикла если угадали
-
-
-# print(f'Количество попыток: {random_predict(17)}')
+            break # выход из цикла если угадали
+    
+    return (count)  
+        
 
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
@@ -56,6 +55,7 @@ def score_game(random_predict) -> int:
     print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
     return (score)
 
-# RUN
+
 if __name__=='__main__':
     score_game(random_predict)
+ 
