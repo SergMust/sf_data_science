@@ -20,8 +20,8 @@ def random_predict(number: int = 1) -> int:
     while a != b: # выполняем цикл пока значения границ диапазона не равны
         count += 1
         average_value = int((a+b) // 2) # вычисляем среднее значение диапазона
-        if number < average_value: 
-            b = average_value  # если число меньше среднего значения, 
+        if number <= average_value: 
+            b = average_value  # если число меньше  среднего значения, 
             # то это значение становиться максимальной границей диапазона
         elif number > average_value:
             a = average_value + 1 # если число больше среднего значения, 
