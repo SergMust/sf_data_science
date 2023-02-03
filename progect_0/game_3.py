@@ -3,28 +3,28 @@
 
 import numpy as np
 
-def random_predict(number: int = 1) -> int:
+def half_division(number) -> int:
     """Рандомно компьютер загадывает число
 
     Args:
-        number (int, optional): Загадываем число. Default to 1.
+        number (int, optional): Загадываем число. 
 
     Returns:
         int: Число попыток
     """
 
-    a = 1 # минимальное значение диапазона
-    b = 101 # максимальное значение диапазона
-    number = np.random.randint(a, b) # Компьютер загадывает число
+    min_value = 1 # минимальное значение диапазона
+    max_value = 101 # максимальное значение диапазона
+    number = np.random.randint(min_value, max_value) # Компьютер загадывает число
     count = 0
-    while a != b: # выполняем цикл пока значения границ диапазона не равны
+    while min_value != max_value: # выполняем цикл пока значения границ диапазона не равны
         count += 1
-        average_value = int((a+b) // 2) # вычисляем среднее значение диапазона
-        if number <= average_value: 
-            b = average_value  # если число меньше  среднего значения, 
+        average_value = int((min_value+max_value) // 2) # вычисляем среднее значение диапазона
+        if number < average_value: 
+            max_value = average_value  # если число меньше  среднего значения, 
             # то это значение становиться максимальной границей диапазона
         elif number > average_value:
-            a = average_value + 1 # если число больше среднего значения, 
+            min_value = average_value + 1 # если число больше среднего значения, 
             # то это значение становиться минимальной границей диапазона + 1
         else:
             break # выход из цикла если угадали
@@ -32,7 +32,7 @@ def random_predict(number: int = 1) -> int:
     return count  
         
 
-def score_game(random_predict) -> int:
+def score_game(half_division) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
 
     Args:
@@ -41,14 +41,14 @@ def score_game(random_predict) -> int:
     Returns:
         int: среднее количество попыток
     """
-    a = 1
-    b = 101
+    min_value = 1
+    max_value = 101
     count_ls = []  # список для сохранения количества попыток
     np.random.seed(1)  # фиксируем сид для воспроизводимости
-    random_array = np.random.randint(a, b, size=(1000))  # загадали список чисел
+    random_array = np.random.randint(min_value, max_value, size=(1000))  # загадали список чисел
 
     for number in random_array:
-        count_ls.append(random_predict(number))
+        count_ls.append(half_division(number))
 
     score = int(np.mean(count_ls))  # находим среднее количество попыток
 
@@ -57,5 +57,5 @@ def score_game(random_predict) -> int:
 
 
 if __name__=='__main__':
-    score_game(random_predict)
+    score_game(half_division)
  
