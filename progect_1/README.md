@@ -7,8 +7,8 @@ SF homework
 
 ## Оглавление
 [1. Описание проекта](https://github.com/SergMust/sf_data_science/tree/main/progect_1/README.MD#Описание-проекта)
-[2. Краткая информация о данных](https://github.com/SergMust/sf_data_science/tree/main/progect_1/README.MD#Краткая информация о данных)
-[3. Этапы работы над проектом](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Этапы работы над проектом)
+[2. Краткая информация о данных](https://github.com/SergMust/sf_data_science/tree/main/progect_1/README.MD#Краткая )
+[3. Этапы работы над проектом](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Этапы )
 [4. Результаты](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Результат)
 [5. Выводы](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Выводы)
 
@@ -18,7 +18,7 @@ SF homework
 :arrow_up:[к оглавлению](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Оглавление)
 
 ### Краткая информация о данных
-Файлы с исходными данными *dst-3.0_16_1_hh_database.csv* и *ExchangeRates.csv* находятся [здесь] (https://drive.google.com/drive/folders/1C9vwmHpLCp_Q7Wmvhxcc1PdQ2euzsULs?usp=share_link)
+Файлы с исходными данными *dst-3.0_16_1_hh_database.csv* и *ExchangeRates.csv* находятся здесь: (https://drive.google.com/drive/folders/1C9vwmHpLCp_Q7Wmvhxcc1PdQ2euzsULs?usp=share_link)
 
 
 :arrow_up:[к оглавлению](https://github.com/SergMust/sf_data_science/blob/main/progect_1/README.MD#Оглавление)
